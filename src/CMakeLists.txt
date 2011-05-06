@@ -19,5 +19,5 @@ install(TARGETS uuid
     LIBRARY DESTINATION lib
     )
 install(FILES uuid.h uuidd.h uuidP.h
-    DESTINATION include
+    DESTINATION include/uuid
     )
