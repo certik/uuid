@@ -12,3 +12,12 @@ set(SRC
 )
 
 add_library(uuid SHARED ${SRC})
+
+install(TARGETS uuid
+    RUNTIME DESTINATION lib
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    )
+install(FILES uuid.h uuidd.h uuidP.h
+    DESTINATION include
+    )
