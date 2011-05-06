@@ -11,6 +11,11 @@ leaves the original autotools Makefile.am/in files intact, so that once can
 debug the CMake build system if it is doing something different (link options,
 etc.).
 
+Motivation
+----------
+
+The motivation for this repository is so that one can easily install just the uuid library, needed by some other packages (like `zeromq <http://www.zeromq.org/>`_), without the need to install the whole ``util-linux`` package.
+
 Install
 -------
 
