@@ -12,8 +12,10 @@ set(SRC
 )
 
 add_library(uuid SHARED ${SRC})
+add_library (uuid_s STATIC ${SRC})
+set_target_properties (uuid_s PROPERTIES OUTPUT_NAME uuid)
 
-install(TARGETS uuid
+install(TARGETS uuid uuid_s
     RUNTIME DESTINATION lib
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib
