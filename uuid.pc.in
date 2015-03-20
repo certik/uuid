@@ -1,11 +1,10 @@
-prefix=@prefix@
-exec_prefix=@exec_prefix@
-libdir=@usrlib_execdir@
-includedir=@includedir@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}/bin
+libdir=${prefix}/lib
+includedir=${prefix}/include
 
 Name: uuid
 Description: Universally unique id library
 Version: @LIBUUID_VERSION@
-Requires:
-Cflags: -I${includedir}/uuid
+Cflags: -DHAVE_LIBUUID -I${includedir}/uuid
 Libs: -L${libdir} -luuid
